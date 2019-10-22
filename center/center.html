@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no,email=no,address=no" />
+    <title>关于居中的那些事</title>
+    <style>
+        /* flex */
+        .parent1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+        }
+        .child1 {
+            width: 10px;
+            height: 10px;
+            background: red;
+        }
+
+        .img1 {
+            width: 10px;
+            height: 10px;
+        }
+
+        .inline1 {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: blue;
+        }
+        /* absolute + transform */
+        .parent2 {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+        }
+        .child2 {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* grid */
+        .parent3 {
+            display: grid;
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+        .child3 {
+            justify-self: center;
+            align-self: center;
+            width: 10px;
+            height: 10px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>在手机上测试</h1>
+    <div class="parent1">
+        <div class="child1"></div>
+    </div>
+    <br>
+    <div class="parent1">
+        <img class="img1" src="https://iph.href.lu/100x100" alt="">
+    </div>
+    <div class="parent1">
+        <span class="inline1"></span>
+    </div>
+    <div class="parent2">
+        <div class="child1 child2">
+        </div>
+    </div>
+    <div class="parent2">
+        <img class="img1 child2" src="https://iph.href.lu/100x100" alt="">
+    </div>
+    <div class="parent3">
+        <div class="child3"></div>
+    </div>
+</body>
+</html>
