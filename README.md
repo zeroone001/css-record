@@ -17,3 +17,8 @@ div {
     overflow: hidden;
 }
 ```
+
+#### vertical-align
+[https://www.zhangxinxu.com/wordpress/2015/08/css-deep-understand-vertical-align-and-line-height/](https://www.zhangxinxu.com/wordpress/2015/08/css-deep-understand-vertical-align-and-line-height/)
+
+
