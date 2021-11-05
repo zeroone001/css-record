@@ -1,0 +1,79 @@
+// var
+$mainColor: #e62828;
+$blackColor: #333;
+$whiteColor: #fff;
+
+// @mixin
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin ellipsis-more($line: 2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
+@function rem($px) {
+  @return $px / 100 * 1rem;
+}
+
+@function rem2($px) {
+  @return $px / 50 * 1rem;
+}
+
+@function four($px) {
+  @return $px * 4;
+}
+// button.Android
+@mixin verticalAlign($height, $fontSize) {
+  position: relative;
+  height: $height;
+  line-height: $height;
+  outline: none;
+  border: none;
+  font-size: $fontSize;
+  vertical-align: middle;
+  overflow: hidden;
+}
+// button.Android::after
+@mixin verticalAlignAndroid($height) {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 400%;
+  line-height: four($height);
+  font-size: 4em;
+  transform: scale(0.25);
+  transform-origin: 0 0;
+}
+
+@mixin box-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin center-translate {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+@mixin absolute-style($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+@mixin colorAndBg($color, $bg) {
+  color: $color;
+  background-color: $bg;
+}
