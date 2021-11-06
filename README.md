@@ -95,3 +95,25 @@ Android
 ## Tools 层代码实现
 
 SassMagic 引入
+
+
+## vue.config.js 配置全局引入文件
+
+[https://cli.vuejs.org/guide/css.html#passing-options-to-pre-processor-loaders](https://cli.vuejs.org/guide/css.html#passing-options-to-pre-processor-loaders)
+```js
+module.exports = {
+  css: {
+    loaderOptions: {
+      scss: {
+        prependData: `@import "~@/variables.sass"`
+      },
+      css: {
+        // 这里的选项会传递给 css-loader
+      },
+      postcss: {
+        // 这里的选项会传递给 postcss-loader
+      }
+    }
+  }
+}
+```
