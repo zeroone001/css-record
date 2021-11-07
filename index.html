@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        html {
+            touch-action: manipulation;
+        }
         .qw {
             height: 70px;
             text-decoration: underline overline;
@@ -19,12 +22,12 @@
             /* display: block; */
         }
         .p1 {font-size: 16px; line-height: 32px;}
-.s1 {font-size: 2em;}
-.s2 {font-size: 2em; line-height: 2em;}
+        .s1 {font-size: 2em;}
+        .s2 {font-size: 2em; line-height: 2em;}
 
-.p2 {font-size: 16px; line-height: 2;}
-.s5 {font-size: 2em;}
-.s6 {font-size: 2em; line-height: 2em;}
+        .p2 {font-size: 16px; line-height: 2;}
+        .s5 {font-size: 2em;}
+        .s6 {font-size: 2em; line-height: 2em;}
     </style>
 </head>
 <body>
@@ -39,5 +42,13 @@
     <div class="qw">
         <img src="https://avatarimg.smzdm.com/default/7764967961/5ace02fe64b22-small.jpg" alt="">
     </div>
+    <script>
+        document.addEventListener('touchmove', (event) => {
+            event.preventDefault();
+            console.log('event', event);
+        }, {
+            passive: false
+        });
+    </script>
 </body>
 </html>
