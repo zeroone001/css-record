@@ -117,3 +117,5 @@ module.exports = {
   }
 }
 ```
+
+## scroll-snap-align
