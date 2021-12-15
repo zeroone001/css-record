@@ -119,3 +119,12 @@ module.exports = {
 ```
 
 ## scroll-snap-align
+
+## text-transform
+
+text-transform CSS属性指定如何将元素的文本大写。它可以用于使文本显示为全大写或全小写，也可单独对每一个单词进行操作
+
+https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-transform
+
+text-transform: capitalize; 首字母大写
+ 
