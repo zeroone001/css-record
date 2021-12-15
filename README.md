@@ -128,3 +128,62 @@ https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-transform
 
 text-transform: capitalize; 首字母大写
  
+## hsl
+
+```css
+.green {
+  background-color: hsl(120, 100%, 50%);
+}
+```
+
+## linear-gradient
+
+```css
+div {
+  border-radius: 20px;
+  width: 70%;
+  height: 400px;
+  margin: 50px auto;
+  background: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+
+}
+```
+
+## repeating-linear-gradient
+
+创建一个由重复线性渐变组成的<image>
+
+```css
+  div{
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin:  50 auto;
+    background: repeating-linear-gradient(
+      45deg,
+      yellow 0px,
+      yellow 40px,
+      black 40px,
+      black 80px
+    );
+  }
+
+/* 斑马线 */
+#grad2 {
+  background-image: repeating-linear-gradient(-45deg,
+      transparent,
+      transparent 25px,
+      rgba(255,255,255,1) 25px,
+      rgba(255,255,255,1) 50px);
+}
+```
+
+## transform
+
+把 id 为 ball2 的元素放大到原始大小的 1.5 倍。
+
+```css
+#ball2 {
+    transform: scale(1.5);
+  }
+```
