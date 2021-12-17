@@ -588,3 +588,11 @@ animation-timing-function 用来定义动画的速度曲线。 速度曲线决�
     <label for="master">Master</label>
 </fieldset>
 ```
+## 使用 grid-template-columns 添加多列
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: 50px 50px;
+}
+```
